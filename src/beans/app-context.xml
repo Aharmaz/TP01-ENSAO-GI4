@@ -10,5 +10,10 @@
         <property name="gestionMaterielService" ref="gestionMaterielService"/>
     </bean>
 
+    <bean id="listesMateriels" class="com.ensa.gi4.dao.ListesMateriels">
+        <constructor-arg value="sq"/>
+    </bean>
+
+
 
 </beans>
