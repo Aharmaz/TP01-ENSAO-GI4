@@ -1,5 +1,6 @@
 package com.ensa.gi4.dao;
 
+import com.ensa.gi4.controller.GestionMaterielController;
 import com.ensa.gi4.modele.Materiel;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -8,9 +9,13 @@ import java.util.ArrayList;
 
 public class MaterielDAOImpl implements MaterielDAO {
 
-    //ApplicationContext context = new ClassPathXmlApplicationContext("/beans/app-context.xml");
+    // ApplicationContext context = new ClassPathXmlApplicationContext("/beans/app-context.xml");
 
-    public ListesMateriels lis = new ListesMateriels();
+    public ListesMateriels lis;
+
+    public MaterielDAOImpl(ListesMateriels lis) {
+        this.lis = lis;
+    }
 
     @Override
     public void listerMaterielDAO() {

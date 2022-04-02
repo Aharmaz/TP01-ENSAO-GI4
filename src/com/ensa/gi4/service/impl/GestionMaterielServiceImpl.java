@@ -12,7 +12,12 @@ import java.util.List;
 public class GestionMaterielServiceImpl implements GestionMaterielService {
 
 
-    public MaterielDAO materielDAO = new MaterielDAOImpl();
+    public MaterielDAO materielDAO;
+
+    GestionMaterielServiceImpl(MaterielDAO materielDAO) {
+        this.materielDAO = materielDAO;
+
+    }
 
     // bd goes here
     @Override
