@@ -2,19 +2,25 @@ package com.ensa.gi4.dao;
 
 import com.ensa.gi4.controller.GestionMaterielController;
 import com.ensa.gi4.modele.Materiel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 
+
+@Component
 public class MaterielDAOImpl implements MaterielDAO {
 
     // ApplicationContext context = new ClassPathXmlApplicationContext("/beans/app-context.xml");
 
+    @Autowired
     public ListesMateriels lis;
 
-    public MaterielDAOImpl(ListesMateriels lis) {
-        this.lis = lis;
+
+    public MaterielDAOImpl() {
+
     }
 
     @Override

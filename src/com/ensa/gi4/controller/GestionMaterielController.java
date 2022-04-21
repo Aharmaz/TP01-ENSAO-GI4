@@ -4,14 +4,22 @@ import com.ensa.gi4.dao.ListesMateriels;
 import com.ensa.gi4.modele.Livre;
 import com.ensa.gi4.modele.Materiel;
 import com.ensa.gi4.service.api.GestionMaterielService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Scanner;
 
+
+@Component
 public class GestionMaterielController {
 
+    @Autowired
     private ListesMateriels li;
 
+
+    @Autowired
     private GestionMaterielService gestionMaterielService;
 
     public void listerMateriel() {
